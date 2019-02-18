@@ -14,10 +14,10 @@ require 'juwelier'
 Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "quran-core"
-  gem.homepage = "http://github.com/Naveed/quran-core"
+  gem.homepage = "http://github.com/quran/quran-core"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Quran core models}
+  gem.description = %Q{Core models for Quran api, community and Quran app}
   gem.email = "naveedahmada036@gmail.com"
   gem.authors = ["Naveed Ahmad"]
 
