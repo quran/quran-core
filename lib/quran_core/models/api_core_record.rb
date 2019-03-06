@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ApplicationRecord < ActiveRecord::Base
+class ApiCoreRecord < ActiveRecord::Base
   self.abstract_class = true
   # Maybe read configuration from yml file and initialize the connection here?
   # For now, each app using this gem need to define quran_core configuration in database.yml file.

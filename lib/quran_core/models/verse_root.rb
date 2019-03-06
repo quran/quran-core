@@ -10,7 +10,7 @@
 #  updated_at :datetime         not null
 #
 
-class VerseRoot < ApplicationRecord
+class VerseRoot < ApiCoreRecord
   has_many :verses
   has_many :words, through: :verses
 end

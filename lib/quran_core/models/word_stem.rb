@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class WordStem < ApplicationRecord
+class WordStem < ApiCoreRecord
   belongs_to :word
   belongs_to :stem
 end

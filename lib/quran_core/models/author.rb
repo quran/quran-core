@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class Author < ApplicationRecord
+class Author < ApiCoreRecord
   has_many :translated_names, as: :resource
   has_many :resource_contents
 end

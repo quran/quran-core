@@ -11,5 +11,5 @@
 #  updated_at   :datetime         not null
 #
 
-class Token < ApplicationRecord
+class Token < ApiCoreRecord
 end

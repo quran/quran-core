@@ -32,7 +32,7 @@
 #  char_type_name :string
 #
 
-class Word < ApplicationRecord
+class Word < ApiCoreRecord
   belongs_to :verse
   belongs_to :char_type
   belongs_to :topic
@@ -55,5 +55,9 @@ class Word < ApplicationRecord
   Language.all.each do |language|
     has_many "#{language.iso_code}_translations".to_sym, -> { where(language: language) }, class_name: 'Translation', as: :resource
     has_many "#{language.iso_code}_transliterations".to_sym, -> { where(language: language) }, class_name: 'Transliteration', as: :resource
+  end
+
+  def code
+    "&#x#{code_hex};"
   end
 end

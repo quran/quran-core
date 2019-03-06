@@ -14,7 +14,7 @@
 #  updated_at          :datetime         not null
 #
 
-class Language < ApplicationRecord
+class Language < ApiCoreRecord
   has_many :translated_names, as: :resource
 
   class << self

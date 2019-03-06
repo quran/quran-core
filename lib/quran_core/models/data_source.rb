@@ -11,6 +11,6 @@
 #  updated_at :datetime         not null
 #
 
-class DataSource < ApplicationRecord
+class DataSource < ApiCoreRecord
   has_many :resource_contents
 end

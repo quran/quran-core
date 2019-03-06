@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class Topic < ApplicationRecord
+class Topic < ApiCoreRecord
   belongs_to :parent, class_name: 'Topic'
   belongs_to :children, class_name: 'Topic', foreign_key: 'parent_id'
   has_many :words

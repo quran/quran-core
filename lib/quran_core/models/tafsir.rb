@@ -16,7 +16,7 @@
 #  verse_key           :string
 #
 
-class Tafsir < ApplicationRecord
+class Tafsir < ApiCoreRecord
   belongs_to :verse
   belongs_to :language
   belongs_to :resource_content

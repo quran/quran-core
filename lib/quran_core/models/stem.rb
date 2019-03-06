@@ -11,7 +11,7 @@
 #  updated_at  :datetime         not null
 #
 
-class Stem < ApplicationRecord
+class Stem < ApiCoreRecord
   has_many :word_stems
   has_many :words, through: :word_stems
   has_many :verses, through: :words

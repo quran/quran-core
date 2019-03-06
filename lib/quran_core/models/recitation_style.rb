@@ -10,6 +10,6 @@
 #  updated_at :datetime         not null
 #
 
-class RecitationStyle < ApplicationRecord
+class RecitationStyle < ApiCoreRecord
   has_many :translated_names, as: :resource
 end

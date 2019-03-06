@@ -11,7 +11,7 @@
 #  updated_at  :datetime         not null
 #
 
-class VerseStem < ApplicationRecord
+class VerseStem < ApiCoreRecord
   has_many :verses
   has_many :words, through: :verses
 end

@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class WordRoot < ApplicationRecord
+class WordRoot < ApiCoreRecord
   belongs_to :word
   belongs_to :root
 end

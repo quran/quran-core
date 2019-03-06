@@ -10,6 +10,6 @@
 #  updated_at :datetime         not null
 #
 
-class Reciter < ApplicationRecord
+class Reciter < ApiCoreRecord
   has_many :translated_names, as: :resource
 end

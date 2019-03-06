@@ -10,6 +10,6 @@
 #  updated_at          :datetime         not null
 #
 
-class ResourceContentStat < ApplicationRecord
+class ResourceContentStat < ApiCoreRecord
   belongs_to :resource_content
 end

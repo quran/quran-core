@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 
-class WordLemma < ApplicationRecord
+class WordLemma < ApiCoreRecord
   belongs_to :word
   belongs_to :lemma
 end

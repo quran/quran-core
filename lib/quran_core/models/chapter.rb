@@ -18,12 +18,15 @@
 #  updated_at       :datetime         not null
 #
 
-class Chapter < ApplicationRecord
+class Chapter < ApiCoreRecord
   has_many :verses
-  has_many :translated_names, as: :resource
   has_many :chapter_infos
 
-  serialize :pages
+  has_many :translated_names, as: :resource
+
+  has_one :translated_name, as: :resource
+
+  # serialize :pages
 
   default_scope { order 'chapter_number asc' }
 

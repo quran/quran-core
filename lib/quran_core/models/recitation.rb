@@ -14,7 +14,7 @@
 #  updated_at          :datetime         not null
 #
 
-class Recitation < ApplicationRecord
+class Recitation < ApiCoreRecord
   belongs_to :reciter
   belongs_to :resource_content
   belongs_to :recitation_style

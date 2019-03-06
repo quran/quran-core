@@ -14,6 +14,6 @@
 #  updated_at  :datetime         not null
 #
 
-class WordCorpus < ApplicationRecord
+class WordCorpus < ApiCoreRecord
   belongs_to :word
 end

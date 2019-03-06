@@ -16,7 +16,7 @@
 #  resource_name       :string
 #
 
-class Translation < ApplicationRecord
+class Translation < ApiCoreRecord
   include LanguageFilterable
 
   belongs_to :resource, polymorphic: true

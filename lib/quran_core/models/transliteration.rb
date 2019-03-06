@@ -15,7 +15,7 @@
 #  updated_at          :datetime         not null
 #
 
-class Transliteration < ApplicationRecord
+class Transliteration < ApiCoreRecord
   include LanguageFilterable
 
   belongs_to :resource, polymorphic: true

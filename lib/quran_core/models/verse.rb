@@ -27,7 +27,7 @@
 #  verse_stem_id  :integer
 #
 
-class Verse < ApplicationRecord
+class Verse < ApiCoreRecord
   belongs_to :chapter, inverse_of: :verses, counter_cache: true
   belongs_to :verse_root
   belongs_to :verse_lemma

@@ -16,7 +16,7 @@
 #  updated_at          :datetime         not null
 #
 
-class ChapterInfo < ApplicationRecord
+class ChapterInfo < ApiCoreRecord
   include LanguageFilterable
 
   belongs_to :chapter

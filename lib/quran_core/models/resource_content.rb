@@ -21,7 +21,7 @@
 #  mobile_translation_id :integer
 #
 
-class ResourceContent < ApplicationRecord
+class ResourceContent < ApiCoreRecord
   include LanguageFilterable
 
   scope :translations, -> { where sub_type: [SubType::Translation, SubType::Transliteration] }
