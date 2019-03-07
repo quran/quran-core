@@ -27,7 +27,7 @@ class Chapter < ApiCoreRecord
   # For eager loading
   has_one :translated_name, as: :resource
 
-  # serialize :pages
+  serialize :pages
 
   default_scope { order 'chapter_number asc' }
 
