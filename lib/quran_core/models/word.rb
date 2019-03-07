@@ -49,13 +49,16 @@ class Word < ApiCoreRecord
 
   has_one  :audio, class_name: 'AudioFile', as: :resource
   has_one :word_corpus
+  # For eager loading
+  has_one :locale_translation, ->(first_lang, fallback_lang ) {where("language_id = ? OR language_id = ?", first_lang, fallback_lang)}, as: :resource, class_name: 'Translation'
+  has_many :transliteration, as: :resource
 
   default_scope { order 'position asc' }
 
-  Language.all.each do |language|
-    has_many "#{language.iso_code}_translations".to_sym, -> { where(language: language) }, class_name: 'Translation', as: :resource
-    has_many "#{language.iso_code}_transliterations".to_sym, -> { where(language: language) }, class_name: 'Transliteration', as: :resource
-  end
+  #Language.all.each do |language|
+  #  has_many "#{language.iso_code}_translations".to_sym, -> { where(language: language) }, class_name: 'Translation', as: :resource
+  #  has_many "#{language.iso_code}_transliterations".to_sym, -> { where(language: language) }, class_name: 'Transliteration', as: :resource
+  #end
 
   def code
     "&#x#{code_hex};"
