@@ -17,7 +17,7 @@
 #
 
 class ChapterInfo < ApiCoreRecord
-  # include LanguageFilterable
+  include LanguageFilterable
 
   belongs_to :chapter
   belongs_to :resource_content
