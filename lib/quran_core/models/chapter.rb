@@ -19,8 +19,11 @@
 #
 
 class Chapter < ApiCoreRecord
+  include Slugable
+  
   has_many :verses
   has_many :chapter_infos
+  has_many :slugs
 
   has_many :translated_names, as: :resource
 
