@@ -3,7 +3,7 @@ module Slugable
 
   included do
     def self.find_using_slug(slug)
-      include(:slugs).where(slug: slug.to_s)
+      joins(:slugs).where('slugs.slug': slug).first || find_by(id: slug)
     end
   end
 end
