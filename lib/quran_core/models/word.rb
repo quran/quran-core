@@ -51,15 +51,10 @@ class Word < ApiCoreRecord
   has_one :word_corpus
 
   # For eager loading
-  has_one :translation, as: :resource
+  has_one :word_translation
   has_one :transliteration, as: :resource
 
   default_scope { order 'position asc' }
-
-  #Language.all.each do |language|
-  #  has_many "#{language.iso_code}_translations".to_sym, -> { where(language: language) }, class_name: 'Translation', as: :resource
-  #  has_many "#{language.iso_code}_transliterations".to_sym, -> { where(language: language) }, class_name: 'Transliteration', as: :resource
-  #end
 
   def code
     "&#x#{code_hex};"
