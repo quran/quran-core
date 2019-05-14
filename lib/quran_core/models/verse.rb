@@ -42,6 +42,9 @@ class Verse < ApiCoreRecord
   has_many :recitations, through: :audio_files
   has_many :roots, through: :words
 
+  # For eager loading
+  has_one  :audio, class_name: 'AudioFile', as: :resource
+
   default_scope { order 'verse_number asc' }
 
   def self.find_by_id_or_key(id)

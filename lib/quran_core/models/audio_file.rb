@@ -22,5 +22,5 @@ class AudioFile < ApiCoreRecord
   belongs_to :resource, polymorphic: true
   belongs_to :recitation
 
-  # serialize :segments, Array
+  serialize :segments, Array
 end
