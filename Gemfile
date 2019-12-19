@@ -7,7 +7,7 @@ gem 'pg'
 gem 'activerecord', '~> 6.0.0.beta1'
 
 # Elasticsearch
-gem 'excon' # using excon as faraday adapter (net::http breaks)
+gem 'excon' , '>= 0.71.0' # using excon as faraday adapter (net::http breaks)
 gem 'elasticsearch'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
