@@ -38,7 +38,6 @@ class Word < ApiCoreRecord
   belongs_to :topic
   belongs_to :token
 
-  has_many :translations, as: :resource
   has_many :transliterations, as: :resource
   has_many :word_lemmas
   has_many :lemmas, through: :word_lemmas

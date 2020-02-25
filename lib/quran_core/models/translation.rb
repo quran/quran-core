@@ -23,6 +23,4 @@ class Translation < ApiCoreRecord
   belongs_to :resource_content
 
   has_many :foot_notes, as: :resource
-
-  default_scope {order 'priority asc'}
 end
