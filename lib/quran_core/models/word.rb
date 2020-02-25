@@ -58,4 +58,8 @@ class Word < ApiCoreRecord
   def code
     "&#x#{code_hex};"
   end
+  
+  def code_v2
+    "&#x#{code_hex_v3};"
+  end
 end
